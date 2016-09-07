@@ -43,7 +43,7 @@ import rx.subscriptions.CompositeSubscription;
 public class MainActivity extends AppCompatActivity implements OnDelegateClickListener{
   private static final String LOG_TAG = Logger.createTag(MainActivity.class);
   public static final String CASH_KEY = "cash";
-  public static final int MIN_SEARCH_LENGTH = 4;
+  public static final int MIN_SEARCH_LENGTH = 2;
   public static final String TEXT_KEY = "text";
   public static final String SERVICE_TYPE_KEY = "serviceType";
 
