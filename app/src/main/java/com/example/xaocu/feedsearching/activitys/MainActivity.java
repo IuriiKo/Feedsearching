@@ -16,7 +16,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.xaocu.feedsearching.R;
-import com.example.xaocu.feedsearching.TestApp;
+import com.example.xaocu.feedsearching.SearchApp;
 import com.example.xaocu.feedsearching.adapters.BaseAdapter;
 import com.example.xaocu.feedsearching.adapters.SuggestAdapter;
 import com.example.xaocu.feedsearching.adapters.items.OnlineFeedItem;
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements OnDelegateClickLi
       @Override
       public void onItemSelected(AdapterView<?> parent, View view,
                                  int position, long id) {
-        TestApp.getManager().setServiceType(serviceDependence.get(position));
+        SearchApp.getManager().setServiceType(serviceDependence.get(position));
       }
       @Override
       public void onNothingSelected(AdapterView<?> arg0) {
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements OnDelegateClickLi
     super.onSaveInstanceState(outState);
     outState.putSerializable(CASH_KEY, cash);
     outState.putString(TEXT_KEY, etSearch.getText().toString());
-    outState.putInt(SERVICE_TYPE_KEY, TestApp.getManager().getServiceType());
+    outState.putInt(SERVICE_TYPE_KEY, SearchApp.getManager().getServiceType());
   }
 
   private void search(@NonNull String text) {
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements OnDelegateClickLi
 
   public void getData(String datasetCode) {
     if (datasetCode == null ||
-        (datasetCode.equalsIgnoreCase(oldConstraint) && cashServiceType == TestApp.getManager().getServiceType()) ||
+        (datasetCode.equalsIgnoreCase(oldConstraint) && cashServiceType == SearchApp.getManager().getServiceType()) ||
         datasetCode.isEmpty()) {
       return;
     }
@@ -174,13 +174,13 @@ public class MainActivity extends AppCompatActivity implements OnDelegateClickLi
       subscription.unsubscribe();
     }
     oldConstraint = datasetCode;
-    cashServiceType = TestApp.getManager().getServiceType();
+    cashServiceType = SearchApp.getManager().getServiceType();
     List<OnlineFeedItem> listFromCash = cash.getFromCash(oldConstraint, cashServiceType);
     if (listFromCash != null) {
       onSuccessGetData(listFromCash);
       return;
     }
-    subscription = TestApp.getManager().getData(datasetCode)
+    subscription = SearchApp.getManager().getData(datasetCode)
         .map(responseBody -> CSVFile.read(responseBody.byteStream(), cashServiceType))
         .flatMap(Observable::from)
         .map(OnlineFeedItem::new)
@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity implements OnDelegateClickLi
   }
 
   private void onSuccessGetData(List<OnlineFeedItem> data) {
-    List<OnlineFeedItem> listFromCash = cash.getFromCash(oldConstraint, TestApp.getManager().getServiceType());
+    List<OnlineFeedItem> listFromCash = cash.getFromCash(oldConstraint, SearchApp.getManager().getServiceType());
     if (listFromCash == null) {
       cash.addToCash(oldConstraint, data, cashServiceType);
     }

@@ -8,7 +8,7 @@ import com.example.xaocu.feedsearching.net.NetManager;
 /**
  * Created by Iurii Kushyk on 04.09.2016.
  */
-public class TestApp extends Application {
+public class SearchApp extends Application {
   private static NetManager manager;
   private static Context applicationContext;
   @Override

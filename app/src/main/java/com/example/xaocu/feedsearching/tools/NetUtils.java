@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.example.xaocu.feedsearching.TestApp;
+import com.example.xaocu.feedsearching.SearchApp;
 
 
 /**
@@ -12,7 +12,7 @@ import com.example.xaocu.feedsearching.TestApp;
  */
 public class NetUtils {
   public static boolean isConnected() {
-    ConnectivityManager cm = (ConnectivityManager) TestApp.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+    ConnectivityManager cm = (ConnectivityManager) SearchApp.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
     NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
     return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
   }

@@ -1,7 +1,7 @@
 package com.example.xaocu.feedsearching.tools;
 
 import com.example.xaocu.feedsearching.R;
-import com.example.xaocu.feedsearching.TestApp;
+import com.example.xaocu.feedsearching.SearchApp;
 import com.example.xaocu.feedsearching.model.BaseFeed;
 import com.example.xaocu.feedsearching.model.OnlineFeed;
 import com.example.xaocu.feedsearching.model.RawFeed;
@@ -28,7 +28,7 @@ public class CSVFile {
   private static String LOG_TAG = Logger.createTag(CSVFile.class);
 
   public static List<BaseFeed> readRaw() {
-    return read(TestApp.getContext().getResources().openRawResource(R.raw.datasets_codes), ServiceType.RAW);
+    return read(SearchApp.getContext().getResources().openRawResource(R.raw.datasets_codes), ServiceType.RAW);
   }
 
   public static List<BaseFeed> read(InputStream stream, @ServiceType int serviceType) {
