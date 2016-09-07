@@ -1,5 +1,7 @@
 package com.example.xaocu.feedsearching.net.wrappers;
 
+import com.example.xaocu.feedsearching.R;
+import com.example.xaocu.feedsearching.SearchApp;
 import com.example.xaocu.feedsearching.net.QuotemediaService;
 
 import okhttp3.OkHttpClient;
@@ -13,9 +15,9 @@ import rx.Observable;
  */
 public class QuotemediaServiceWrapper extends BaseServiceWrapper<QuotemediaService> {
 
-  public static QuotemediaService createServise(OkHttpClient client) {
+  public static QuotemediaService createService(OkHttpClient client) {
     Retrofit retrofit = new Retrofit.Builder()
-        .baseUrl("http://app.quotemedia.com/")
+        .baseUrl(SearchApp.getContext().getResources().getString(R.string.url_quotemedia))
         .client(client)
         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
         .build();

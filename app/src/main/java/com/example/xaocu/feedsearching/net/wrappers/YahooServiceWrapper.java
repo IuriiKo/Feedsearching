@@ -1,6 +1,8 @@
 package com.example.xaocu.feedsearching.net.wrappers;
 
 
+import com.example.xaocu.feedsearching.R;
+import com.example.xaocu.feedsearching.SearchApp;
 import com.example.xaocu.feedsearching.net.YahooService;
 
 import okhttp3.OkHttpClient;
@@ -13,9 +15,9 @@ import rx.Observable;
  * Created by Iurii Kushyk on 07.09.2016.
  */
 public class YahooServiceWrapper extends BaseServiceWrapper<YahooService> {
-  public static YahooService createServise(OkHttpClient client) {
+  public static YahooService createService(OkHttpClient client) {
     Retrofit retrofit = new Retrofit.Builder()
-        .baseUrl("http://ichart.finance.yahoo.com/")
+        .baseUrl(SearchApp.getContext().getResources().getString(R.string.url_yahoo))
         .client(client)
         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
         .build();

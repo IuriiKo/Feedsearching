@@ -29,23 +29,23 @@ public class ServiceFactory {
       case ServiceType.QUANDL:
 
         if (quandlServiceWrapper == null) {
-          quandlServiceWrapper = new QuandlServiceWrapper(QuandlServiceWrapper.createServise(client));
+          quandlServiceWrapper = new QuandlServiceWrapper(QuandlServiceWrapper.createService(client));
         }
         return quandlServiceWrapper;
       case ServiceType.QUOTEMEDIA:
         if (quotemediaServiceWrapper == null) {
-          quotemediaServiceWrapper = new QuotemediaServiceWrapper(QuotemediaServiceWrapper.createServise(client));
+          quotemediaServiceWrapper = new QuotemediaServiceWrapper(QuotemediaServiceWrapper.createService(client));
         }
         return quotemediaServiceWrapper;
       case ServiceType.GOOGLE:
 
         if (googleServiceWrapper == null) {
-          googleServiceWrapper = new GoogleServiceWrapper(GoogleServiceWrapper.createServise(client));
+          googleServiceWrapper = new GoogleServiceWrapper(GoogleServiceWrapper.createService(client));
         }
         return googleServiceWrapper;
       case ServiceType.YAHOO:
         if (yahooServiceWrapper == null) {
-          yahooServiceWrapper = new YahooServiceWrapper(YahooServiceWrapper.createServise(client));
+          yahooServiceWrapper = new YahooServiceWrapper(YahooServiceWrapper.createService(client));
         }
         return yahooServiceWrapper;
       default:
