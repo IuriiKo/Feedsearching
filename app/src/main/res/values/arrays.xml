@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="feeds">
+        <item>@string/quandl</item>
+        <item>@string/quotemedia</item>
+        <item>@string/google</item>
+        <item>@string/yahoo</item>
+    </string-array>
+</resources>

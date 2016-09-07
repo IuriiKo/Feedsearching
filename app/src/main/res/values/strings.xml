@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Feed searching</string>
+    <string name="open">Open</string>
+    <string name="high">High</string>
+    <string name="low">Low</string>
+    <string name="close">Close</string>
+    <!-- Spinner items -->
+    <string name="google">Google</string>
+    <string name="yahoo">Yahoo</string>
+    <string name="quotemedia">Quotemedia</string>
+    <string name="quandl">Quandl</string>
+    <!-- END-->
+    <!-- Toast messages -->
+    <string name="connection_lost">Connection lost</string>
+    <string name="connection_success">Connect to server is success</string>
+    <string name="cant_connect_to_server">Can\'t connect to the server</string>
+    <!-- END-->
 </resources>

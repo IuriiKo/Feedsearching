@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitleOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="@string/open"
+            tools:text="@string/open"/>
+
+        <TextView
+            android:id="@+id/tvOpen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/open"/>
+
+        <TextView
+            android:id="@+id/tvTitleHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="@string/high"
+            tools:text="@string/high"/>
+
+        <TextView
+            android:id="@+id/tvHigh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/high"/>
+
+        <TextView
+            android:id="@+id/tvTitleLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="@string/low"
+            tools:text="@string/low"/>
+
+        <TextView
+            android:id="@+id/tvLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/low"/>
+
+        <TextView
+            android:id="@+id/tvTitleClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="@string/close"
+            tools:text="@string/close"/>
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/close"/>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
