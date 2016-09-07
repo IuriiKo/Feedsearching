@@ -16,9 +16,9 @@
     <string name="cant_connect_to_server">Can\'t connect to the server</string>
     <!-- END-->
     <!-- Service url -->
-    <string name="url_google">http://www.google.com/</string>
-    <string name="url_quandl">https://www.quandl.com/</string>
-    <string name="url_quotemedia">http://app.quotemedia.com/</string>
-    <string name="url_yahoo">http://ichart.finance.yahoo.com/</string>
+    <string name="url_google" translatable="false">http://www.google.com/</string>
+    <string name="url_quandl" translatable="false">https://www.quandl.com/</string>
+    <string name="url_quotemedia" translatable="false">http://app.quotemedia.com/</string>
+    <string name="url_yahoo" translatable="false">http://ichart.finance.yahoo.com/</string>
     <!-- END-->
 </resources>
